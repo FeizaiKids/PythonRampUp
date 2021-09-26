@@ -616,3 +616,12 @@ for item in range(10):
 str_result = "-".join(list_temp)
 print(str_result)
 ```
+
+### 切片赋值
+
+```
+lista = [1,2,3,4]
+listb = [0,0,0,0]
+listb[::-1] = lista
+print(listb)#[4, 3, 2, 1]
+```
