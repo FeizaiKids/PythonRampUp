@@ -378,6 +378,42 @@ print(dict_persons["技术"]  ^  dict_persons["经理"])#{'关羽', '张飞', '�
 print(len(dict_persons["技术"]  |  dict_persons["经理"]))#5
 ```
 
+### 列表常用方法
+
+```
+#查找
+L.index(v [, begin[, end]])
+L.count(x)
+L.pop([index]) 
+
+#修改
+L.insert(index, obj)
+L.extend(lst)
+L.remove(x)
+L.clear()
+L.sort(reverse=False)
+L.reverse()
+
+#拷贝
+L.copy()
+```
+
+### 字典常用方法
+
+```
+#查找
+get(key, default=None)
+setdefault(key, default=None)
+popitem()
+items()
+keys()
+values()
+
+#修改
+update(dict2)
+clear()
+```
+
 ### 函数内存分配
 
 ```
@@ -615,6 +651,26 @@ for item in range(10):
 
 str_result = "-".join(list_temp)
 print(str_result)
+```
+
+```
+#字符串常用方法
+isspace()
+startswith(substr, beg=0,end=len(string))
+endswith(suffix, beg=0, end=len(string))
+find(str, beg=0 end=len(string))
+rfind(str, beg=0,end=len(string))
+count(str, beg= 0,end=len(string))
+replace(old, new [, max])
+lstrip()
+rstrip()
+strip([chars])
+lower()
+upper()
+swapcase()
+center(width, fillchar)
+zfill (width)
+ljust(width[, fillchar])
 ```
 
 ### 切片赋值
