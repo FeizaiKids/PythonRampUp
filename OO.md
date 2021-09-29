@@ -195,3 +195,38 @@ w01.age = 27
 print(w01.age)
 print(w01.__dict__)
 ```
+
+### 只读属性
+
+```
+class Wife02:
+    def __init__(self):
+        self.__age = 26
+
+    @property
+    def age(self):  # 秘书
+        return self.__age  # 老板
+
+w01 = Wife02()
+print(w01.age)
+
+# w01.age = 100# 不能写入
+```
+
+### 只写属性
+
+```
+class Wife01:
+    def __init__(self, age=0):
+        self.age = age
+
+    def __set_age(self, v):
+        self.__age = v
+
+    age = property(None, __set_age) #因为没有属性绑定
+
+w01 = Wife01(25)
+w01.age = 26
+# print(w01.age)
+print(w01.__dict__) 
+```
