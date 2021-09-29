@@ -170,3 +170,28 @@ w01.age = 27
 print(w01.age)
 print(w01.__dict__)
 ```
+
+### 标准属性封装
+
+```
+class Wife:
+    def __init__(self, name="", age=0):
+        self.name = name
+        self.age = age #创建实例变量
+
+    @property# 创建property对象,自动绑定下面方法（读取）
+    def age(self): # 与属性名一致
+        return self.__age
+
+    @age.setter# 自动绑定下面方法（写入）
+    def age(self, value): # 与属性名一致
+        if 20 <= value <= 50:
+            self.__age = value
+        else:
+            raise Exception("我不要")
+
+w01 = Wife("宁宁", 25)
+w01.age = 27
+print(w01.age)
+print(w01.__dict__)
+```
