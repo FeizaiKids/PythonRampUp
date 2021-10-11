@@ -305,7 +305,7 @@ print(eval("1+2*3"))
 # 克隆对象
 w02 = eval(w01.__repr__())
 w01.age = 26
-print(w02.atk)
+print(w02.age)
 ```
 
 ### 运算符重载
