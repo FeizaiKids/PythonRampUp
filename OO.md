@@ -230,3 +230,45 @@ w01.age = 26
 # print(w01.age)
 print(w01.__dict__) 
 ```
+
+### 继承
+
+```
+# 内置函数
+# isinstance   对象  是一种  类型
+print(isinstance(p01, Person))  # True
+print(isinstance(s01, Person))  # True
+print(isinstance(t01, Student))  # False
+print(isinstance(p01, Teacher))  # False
+
+# issubclass   类型  是一种  类型
+print(issubclass(Person, Person))  # True
+print(issubclass(Student, Person))  # True
+print(issubclass(Teacher, Student))  # False
+print(issubclass(Person, Teacher))  # False
+
+# type 对象  是  类型
+print(type(p01) == Person)  # True
+print(type(s01) == Person)  # False
+print(type(t01) == Student)  # False
+print(type(p01) == Teacher)  # False
+```
+
+### 继承 - 数据
+
+```
+class Person:
+    def __init__(self, name=""):
+        self.name = name
+
+
+class Student(Person):
+    def __init__(self, name="", score=0):
+        super().__init__(name)
+        self.score = score
+
+
+# 如果子类没有构造函数,直接使用父类构造函数
+s01 = Student("悟空", 100)
+print(s01.name)
+```
