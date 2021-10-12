@@ -424,3 +424,44 @@ a01 = Airplane()
 p01.go_to(c01)
 
 ```
+
+### 多继承
+
+```
+class A:
+    def func(self):
+        print("A")
+
+class B(A):
+    def func(self):
+        print("B")
+
+class C(A):
+    def func(self):
+        print("C")
+
+class D(B, C):
+    def func(self):
+        print("D")
+        super().func()# B
+        C.func(self)# 调用指定名称的父类同名方法 C
+
+d01 = D()
+d01.func()
+print(D.mro())
+```
+
+### 设计规则
+
+#### 开-闭原则（目标、总的指导思想） 
+
+#### 类的单一职责（一个类的定义）
+
+#### 依赖倒置（依赖抽象）
+
+#### 组合复用原则（复用的最佳实践）
+
+#### 里氏替换（继承后的重写，指导继承的设计）
+
+#### 迪米特法则（类与类交互的原则）
+
