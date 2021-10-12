@@ -681,3 +681,15 @@ listb = [0,0,0,0]
 listb[::-1] = lista
 print(listb)#[4, 3, 2, 1]
 ```
+
+### codec
+
+```
+import codecs
+
+word = '三國志曹操傳'
+byte = codecs.encode(word, 'big5')
+# res = codecs.decode(byte, 'gbk')
+res = codecs.decode(byte, 'gbk', 'ignore')
+print(res)
+```
