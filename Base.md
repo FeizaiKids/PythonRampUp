@@ -693,5 +693,3 @@ byte = codecs.encode(word, 'big5')
 res = codecs.decode(byte, 'gbk', 'ignore')
 print(res)
 ```
-
-test
