@@ -189,7 +189,8 @@ list01 = [10, [20, 30]]
 list02 = list01[:]  # 浅拷贝
 list03 = list01  # 赋值
 list04 = copy.deepcopy(list01)  # 深拷贝
-
+list01[0] = 11
+print()
 # 深拷贝
 # 优点:互不影响
 # 缺点：往往占用内存过多
