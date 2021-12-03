@@ -46,6 +46,26 @@ number07 = 500000000000000000000.0
 print(number07)
 ```
 
+### 类型转换
+
+```
+# 字 --> 数
+# 一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值
+number = ord("a")
+print(number) # 97
+
+# 数 --> 字
+str01 = chr(3498573945793475)
+print(str01)
+```
+
+```
+类型转换: chr / ord / str / bool / int / float / complex / bin / oct / hex
+
+print(chr(0x5b8b))
+print(hex(ord('宋')))
+```
+
 ### python交换变量
 
 ```
@@ -102,18 +122,6 @@ random_number = random.randint(1, 100)
 ```
 for item in range(3,10,2):
     print(item)
-```
-
-### 字符串编码
-
-```
-# 字 --> 数
-number = ord("a")
-print(number)
-
-# 数 --> 字
-str01 = chr(3498573945793475)
-print(str01)
 ```
 
 ### 列表list
